@@ -1,0 +1,3 @@
+/Users/aleakseiambrazhei/Projects/First/First/bin/Release/First.exe
+/Users/aleakseiambrazhei/Projects/First/First/obj/Release/First.csproj.CoreCompileInputs.cache
+/Users/aleakseiambrazhei/Projects/First/First/obj/Release/First.exe

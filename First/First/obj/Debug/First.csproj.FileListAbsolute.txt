@@ -1,0 +1,6 @@
+/Users/aleakseiambrazhei/Projects/First/First/bin/Debug/First.exe
+/Users/aleakseiambrazhei/Projects/First/First/bin/Debug/First.pdb
+/Users/aleakseiambrazhei/Projects/First/First/obj/Debug/First.csproj.AssemblyReference.cache
+/Users/aleakseiambrazhei/Projects/First/First/obj/Debug/First.csproj.CoreCompileInputs.cache
+/Users/aleakseiambrazhei/Projects/First/First/obj/Debug/First.exe
+/Users/aleakseiambrazhei/Projects/First/First/obj/Debug/First.pdb
