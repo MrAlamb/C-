@@ -3,80 +3,67 @@ namespace First
 {
     public class Fun
     {
-        public Double funTan(double x) => Math.Tan(x);
-        public Double funCtan(double x) => Math.Cos(x)/Math.Sin(x);
-        public Double funSin(double x) => Math.Sin(x);
-        public Double funCos(double x) => Math.Cos(x);
-
-
-        public void Fun_tan(double DisplayX)
+        public double func(double x, int Ssave)
         {
-
-            double epsilon = 0.073;
-            double y = 1.1;
-            double step = Math.PI / 25;        
-            while (y >= -1.1)
+            switch (Ssave)
             {
-                for (double x = (-DisplayX - 0.5) * Math.PI; x <= (DisplayX + 0.5) * Math.PI; x += step)
-                {
-                    if (Math.Abs(funTan(x) - y) >= epsilon)
-                        if (Math.Abs(y) < epsilon)
-                            Console.Write("-");
-                        else
-                        {
-                            Console.Write(" ");
-                        }
-                    else
-                    {
-                        Console.Write("*");
-                    }
-                }
-                Console.WriteLine();
-                y -= 0.1;
+                case 0:
+                    return Math.Sin(x);
+                case 1:
+                    return Math.Cos(x);
+                case 2:
+                    return Math.Sin(x) / Math.Cos(x);
+                case 3:
+                    return Math.Cos(x) / Math.Sin(x);
+                default:
+                    return 0;
             }
         }
 
-
-
-        public void Fun_ctan(double DisplayX)
+        public double setEpsilon(int Ssave)
         {
-
-            double epsilon = 0.073;
-            double y = 1.1;
-            double step = Math.PI / 25;    
-            while (y >= -1.1)
+            switch (Ssave)
             {
-                for (double x = -DisplayX * Math.PI; x <= DisplayX * Math.PI; x += step)
-                {
-                    if (Math.Abs(funCtan(x) - y) >= epsilon)
-                        if (Math.Abs(y) < epsilon)
-                            Console.Write("-");
-                        else
-                        {
-                            Console.Write(" ");
-                        }
-                    else
-                    {
-                        Console.Write("*");
-                    }
-                }
-                Console.WriteLine();
-                y -= 0.1;
+                case 0:
+                    return 0.05;
+                case 1:
+                    return 0.05;
+                case 2:
+                    return 0.05;
+                case 3:
+                    return 0.05;
+                default:
+                    return 0;
+            }
+        }
+        public double setStep(int Ssave)
+        {
+            switch (Ssave)
+            {
+                case 0:
+                    return Math.PI / 14;
+                case 1:
+                    return Math.PI / 14;
+                case 2:
+                    return Math.PI / 26.25;
+                case 3:
+                    return Math.PI / 26.25;
+                default:
+                    return 0;
             }
         }
 
-
-        public void Fun_cos(double DisplayX)
+        public void Funuction(double DisplayX, int Save)
         {
 
-            double epsilon = 0.04;
+            double epsilon = setEpsilon(Save);
             double y = 1.1;
-            double step = Math.PI / 30;       
+            double step = setStep(Save);
             while (y >= -1.1)
             {
                 for (double x = -DisplayX * Math.PI; x <= DisplayX * Math.PI; x += step)
                 {
-                    if (Math.Abs(funCos(x) - y) >= epsilon)
+                    if (Math.Abs(func(x, Save) - y) > epsilon)
                         if (Math.Abs(y) < epsilon)
                             Console.Write("-");
                         else
@@ -93,33 +80,8 @@ namespace First
             }
         }
 
-
-        public void Fun_sin(double DisplayX)
-        {
-
-            double epsilon = 0.04;
-            double y = 1.1;
-            double step = Math.PI / 30;       
-            while (y >= -1.1)
-            {
-                for (double x = -DisplayX * Math.PI; x <= DisplayX * Math.PI; x += step)
-                {
-                    if (Math.Abs(funSin(x) - y) >= epsilon)
-                        if (Math.Abs(y) < epsilon)
-                            Console.Write("-");
-                        else
-                        {
-                            Console.Write(" ");
-                        }
-                    else
-                    {
-                        Console.Write("*");
-                    }
-                }
-                Console.WriteLine();
-                y -= 0.1;
-            }
-        }
     }
+
+
 }
 

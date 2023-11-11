@@ -58,38 +58,11 @@ namespace First
 
                 Console.CursorTop = down;
                 Fun a = new Fun();
-                double b;
-                if (y == top)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Cin x:");
-                    a.Fun_sin(double.Parse(Console.ReadLine()));
-                }
-
-                else if (y == top + 1)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Cin x:");
-                    a.Fun_cos(double.Parse(Console.ReadLine()));
-                }
-                else if (y == top + 2)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Cin x:");
-                    a.Fun_tan(double.Parse(Console.ReadLine()));
-                }
-
-                else if (y == top + 3)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Cin x:");
-                    a.Fun_ctan(double.Parse(Console.ReadLine()));
-                }
-
-
-
-                //Console.ReadLine();
-
+                int ssave = y - top;
+                Console.Clear();
+                Console.WriteLine("Cin x:");
+                a.Funuction(double.Parse(Console.ReadLine()), ssave);
+              
             }
 
             bool Flag = true;
@@ -99,7 +72,7 @@ namespace First
             {
                 Graphic();
                 Console.WriteLine("1 - Again \n Any key - Close");
-                if (int.Parse(Console.ReadLine()) == 1) ;
+                if (Console.ReadLine() == "1") continue;
                 else
                 {
                     Console.WriteLine("Good luck");
